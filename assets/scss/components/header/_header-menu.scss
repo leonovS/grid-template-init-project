@@ -1,15 +1,14 @@
-
 .header-menu {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .header-menu__container {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__container {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
     align-items: center;
   }
+}
