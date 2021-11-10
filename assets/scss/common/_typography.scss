@@ -13,7 +13,7 @@ html {
 h1 {
   font-size: 3.75rem;
   letter-spacing: 0.08em;
-  color: #ffffff;
+  color: $color-light;
   font-weight: 300;
   font-family: $font-header;
   text-align: center;
@@ -21,5 +21,5 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: $color-light;
 }
