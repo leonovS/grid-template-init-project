@@ -348,6 +348,13 @@ template {
 /* sm */
 /* xs */
 /* xx */
+.header-content__container, .header-menu__container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 *,
 *::before,
 *::after {
@@ -508,15 +515,6 @@ a {
           justify-content: center;
   gap: 20px;
 }
-
-.header-menu__container,
-.header-content__container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .skills {
   padding: 10px;
 }

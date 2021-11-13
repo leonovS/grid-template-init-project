@@ -15,11 +15,7 @@
 
     gap: $gap;
   }
-}
-.header-menu__container,
-.header-content__container {
-  max-width: 1340px;
-  margin: 0 auto;
-  padding-right: $gap;
-  padding-left: $gap;
+  &__container {
+    @extend %container;
+  }
 }
