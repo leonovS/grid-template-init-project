@@ -16,36 +16,3 @@
 @use "components/sections/section-posts";
 
 @use "components/footer/footer";
-
-@media (min-width: 691px) {
-  .skill-item {
-    min-height: calc(33.3333vh - 13.3333px);
-  }
-}
-@media (max-height: 690px) {
-  .skill-item {
-    min-height: calc(230px - 13.3333px);
-  }
-}
-@media (max-width: 992px) {
-  .header-content__title {
-    margin: 0 0 43px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content__title {
-    margin: 0 0 33ypx;
-  }
-}
-@media (max-width: 992px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.875rem;
-  }
-}

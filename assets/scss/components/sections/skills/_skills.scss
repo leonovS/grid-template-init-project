@@ -2,19 +2,42 @@
 @use "../../../mixins" as *;
 
 .skills {
-  padding: $gap-sm;
-}
-.skills-container {
-  display: grid;
+  @include sm-min {
+    padding: $gap-sm;
+  }
 
-  gap: $gap-sm;
-  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-}
+  @include sm {
+    padding: $gap;
+  }
 
-.skills-actions {
-  display: flex;
-  justify-content: center;
+  &-container {
+    display: grid;
 
-  margin-top: $gap;
-  margin-bottom: 3gap-lg;
+    @include lg-min {
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+      gap: $gap-sm;
+    }
+    @include lg-md {
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+      gap: $gap-sm;
+    }
+    @include md-sm {
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+      gap: $gap-sm;
+    }
+    @include sm {
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      gap: $gap;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: center;
+
+    margin-top: $gap;
+    @include sm-min {
+      margin-bottom: $gap-lg;
+    }
+  }
 }

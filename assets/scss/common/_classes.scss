@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
 
-  height: 60px;
   padding-right: 1em;
   padding-left: 1em;
 
@@ -15,17 +14,37 @@
 
   color: $color-light;
 
-  font-size: 1.125rem;
-
+  @include lg-min {
+    font-size: 1.125rem;
+  }
   &--light {
-    width: 250px;
+    @include lg-min {
+      width: 250px;
+      height: 60px;
+    }
+
+    @include lg-md {
+      width: 200px;
+      height: 50px;
+    }
+
+    @include md {
+      width: 170px;
+      height: 40px;
+    }
 
     border: 2px solid $color-light;
     background-color: rgba(255, 255, 255, 0.1);
   }
 
   &--primary {
-    width: 350px;
+    height: 60px;
+    @include sm-min {
+      width: 350px;
+    }
+    @include sm {
+      width: 100%;
+    }
 
     border: 2px solid $color-primary;
     background-color: rgba(45, 54, 81, 0.8);
