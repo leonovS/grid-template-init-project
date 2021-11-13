@@ -1,7 +1,7 @@
 @use "../../libs/normalize.css/normalize";
 
-@use "presets/skin";
-@use "presets/variables";
+//@use "presets/skin" as *;
+//@use "presets/variables" as *;
 
 @use "mixins/mixins";
 @use "mixins/mixins-media";
