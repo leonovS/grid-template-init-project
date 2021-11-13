@@ -4,24 +4,27 @@
   }
 
   &__list {
-    list-style: none;
+    display: grid;
+    justify-content: end;
+
     margin: 0 -10px 0 0;
     padding: 0;
 
-    display: grid;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(2em, max-content));
-    gap: $gap;
-    letter-spacing: 0.1em;
-  }
+    list-style: none;
 
-  &__item {
+    letter-spacing: 0.1em;
+
+    gap: $gap;
+    grid-template-columns: repeat(auto-fit, minmax(2em, max-content));
   }
 
   &__link {
-    padding: $gap 10px;
     display: block;
+
+    padding: $gap 10px;
+
     transition: color 0.5s;
+
     font-size: 1.125rem;
 
     &:hover,

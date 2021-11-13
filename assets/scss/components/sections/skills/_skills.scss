@@ -1,15 +1,17 @@
 .skills {
-    padding: 10px;
-  }
-  .skills-container {
-    display: grid;
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-    gap: 10px;
-  }
-  
-  .skills-actions {
-    margin-top: $gap;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-  }
+  padding: $gap-sm;
+}
+.skills-container {
+  display: grid;
+
+  gap: $gap-sm;
+  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+}
+
+.skills-actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: $gap;
+  margin-bottom: 3gap-lg;
+}
