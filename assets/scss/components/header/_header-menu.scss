@@ -8,6 +8,12 @@
   right: 0;
   left: 0;
 
+  @include md {
+    background-color: rgba($color-gray-dark, $alpha: 0.25);
+
+    box-shadow: -3px 3px 20px -10px darken($color-gray-dark, $amount: 40%);
+  }
+
   &__container {
     display: grid;
     align-items: center;

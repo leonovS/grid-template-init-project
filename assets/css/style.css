@@ -466,11 +466,10 @@ a {
   display: block;
   padding: 20px 20px 20px 0;
 }
-
 .header-navbar__btn {
   position: relative;
-  width: 24px;
-  height: 16px;
+  width: 30px;
+  height: 20px;
   cursor: pointer;
 }
 .header-navbar__btn span {
@@ -478,7 +477,7 @@ a {
   left: 0;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   -webkit-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
@@ -490,16 +489,19 @@ a {
   background-color: #ffffff;
 }
 .header-navbar__btn span:nth-of-type(1) {
-  top: 0;
+  top: -1px;
 }
 .header-navbar__btn span:nth-of-type(2) {
   top: 8px;
 }
 .header-navbar__btn span:nth-of-type(3) {
-  top: 16px;
+  top: 17px;
+}
+.header-navbar__btn.active span {
+  margin-top: 2px;
 }
 .header-navbar__btn.active span:nth-of-type(1) {
-  top: 8px;
+  top: 6px;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -509,14 +511,17 @@ a {
   opacity: 0;
 }
 .header-navbar__btn.active span:nth-of-type(3) {
-  top: 8px;
+  top: 6px;
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
 }
+.header-navbar__item {
+  list-style: none;
+  margin: 20px 10px;
+}
 .header-navbar__link {
   display: block;
-  padding: 20px 10px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
@@ -693,6 +698,9 @@ a {
     padding: 0;
     list-style: none;
   }
+  .header-navbar__link {
+    padding: 20px 10px;
+  }
   .skill-item__title {
     font-size: 1.25rem;
   }
@@ -742,9 +750,35 @@ a {
   .btn--light {
     width: 170px;
     height: 40px;
+    letter-spacing: 0.05em;
+  }
+  .header-menu {
+    background-color: rgba(68, 89, 110, 0.25);
+    -webkit-box-shadow: -3px 3px 20px -10px black;
+            box-shadow: -3px 3px 20px -10px black;
+  }
+  .header-navbar {
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
   .header-navbar__list {
     display: none;
+    margin: 0 0 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgba(68, 89, 110, 0.9);
+    text-align: right;
+    -webkit-box-shadow: -3px 3px 20px -10px black;
+            box-shadow: -3px 3px 20px -10px black;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+  }
+  .header-navbar__link {
+    padding: 10px 20px;
+    letter-spacing: 0.09em;
   }
   .header-content__title {
     margin: 0 0 33px;
