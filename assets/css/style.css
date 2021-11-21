@@ -350,7 +350,7 @@ template {
 /* xx */
 .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
-  margin: 0 auto;
+  margin: auto;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -663,38 +663,61 @@ a {
   grid-area: a9;
 }
 
+p {
+  color: #637588;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  color: #2d3651;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
 .about {
-  padding: 100px 0;
+  letter-spacing: 0.055em;
   background-color: #e5e5e5;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-.about_content {
-  width: 929px;
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 271px;
+  gap: 100px;
 }
-.aboutp:first-of-type {
+.about__content p {
+  font-size: 1.125rem;
+}
+.about__content p:first-of-type {
   position: relative;
   margin-top: -5px;
 }
-.aboutp:first-of-type::after {
+.about__content p:last-of-type {
+  margin: 0;
+}
+.about__content p:first-of-type::after {
   position: absolute;
+  right: -50px;
   top: 0;
   width: 2px;
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
 }
-.aboutp:last-of-type {
-  margin: 0;
+.about__image {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
 }
-
-h2 {
-  font-size: 40px;
-  letter-spacing: 4px;
-  line-height: 48px;
-  color: #2d3651;
-  font-weight: 700;
-  font-family: "Roboto Slab";
+.about__image img {
+  max-width: 100%;
+  max-height: 480px;
 }
-
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -706,13 +729,11 @@ h2 {
     margin-bottom: 30px;
   }
 }
-
 @media (min-height: 691px) {
   .skill-item {
     min-height: calc(33.3333vh - 13.3333px);
   }
 }
-
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -737,7 +758,6 @@ h2 {
     font-size: 1.25rem;
   }
 }
-
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -757,7 +777,6 @@ h2 {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -774,7 +793,6 @@ h2 {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
-
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
@@ -822,20 +840,17 @@ h2 {
     font-size: 1.125rem;
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills-container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
 }
-
 @media (max-height: 690px) {
   .skill-item {
     min-height: 216.6667px;
   }
 }
-
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;
