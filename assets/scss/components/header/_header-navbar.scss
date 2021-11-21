@@ -98,7 +98,10 @@
 
   &__item {
     list-style: none;
-    margin: $gap $gap-sm;
+    margin: 0;
+    @include md {
+      margin: $gap $gap-sm;
+    }
   }
 
   &__link {

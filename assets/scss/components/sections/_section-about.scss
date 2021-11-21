@@ -1,2 +1,42 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
+
+.about {
+  padding: 100px 0;
+  background-color: #e5e5e5;
+
+  &__container {
+    @extend %container;
+  }
+  &_content {
+    width: 929px;
+  }
+  &p:first-of-type {
+    position: relative;
+
+    margin-top: -5px;
+  }
+  &p:first-of-type::after {
+    position: absolute;
+    top: 0;
+
+    width: 2px;
+    height: 200px;
+
+    content: "";
+
+    background-color: rgba(99, 117, 136, 0.1);
+  }
+  &p:last-of-type {
+    margin: 0;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 48px;
+  color: #2d3651;
+  font-weight: 700;
+  font-family: "Roboto Slab";
+}
