@@ -9,7 +9,7 @@
 
 html {
   overflow-y: scroll;
-
+  color: #637588;
   font-family: $font-main;
   font-size: $font-size;
 }
@@ -39,4 +39,19 @@ a {
   text-decoration: none;
 
   color: $color-light;
+}
+
+p {
+  color: #637588;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  color: #2d3651;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  margin-bottom: 3rem;
 }

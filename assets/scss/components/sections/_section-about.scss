@@ -1,20 +1,6 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-p {
-  color: #637588;
-}
-h2 {
-  font-size: 40px;
-  letter-spacing: 0.1em;
-  line-height: 1.2em;
-  color: #2d3651;
-  font-weight: 700;
-  font-family: "Roboto Slab", serif;
-  margin: 0;
-  margin-bottom: 3rem;
-}
-
 .about {
   letter-spacing: 0.055em;
   background-color: #e5e5e5;
