@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.form__container, .about__container, .header-content__container, .header-menu__container {
+.posts__container, .form__container, .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -396,6 +396,12 @@ h2 {
   font-family: "Roboto Slab", serif;
   margin: 0;
   margin-bottom: 3rem;
+}
+
+h3 {
+  letter-spacing: 0.05em;
+  color: #637588;
+  font-size: 1.125rem;
 }
 
 .btn {
@@ -723,6 +729,19 @@ h2 {
   padding: 30px 0;
   background-color: #2d3651;
 }
+.form .btn--primary {
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.form .btn--primary:hover, .form .btn--primary:focus {
+  border-color: #ffffff;
+  background-color: #d66926;
+}
 .form__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -738,17 +757,118 @@ h2 {
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
-  color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
 }
-.form-item:hover, .form-item:focus {
+.form-item__input:hover, .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
+  color: white;
 }
+
+.posts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.posts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.post-item {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+}
+.post-item__link {
+  display: grid;
+  overflow: hidden;
+  height: 100%;
+  grid-template-rows: 300px 1fr;
+}
+.post-item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #2d3651;
+}
+.post-item__image:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.post-item__caption {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 20px;
+}
+.post-item__caption:hover {
+  color: white;
+}
+.post-item__caption p {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-align: center;
+}
+.post-item__caption h3 {
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+.post-item:nth-of-type(1) {
+  grid-area: p1;
+}
+
+.post-item:nth-of-type(2) {
+  grid-area: p2;
+}
+
+.post-item:nth-of-type(3) {
+  grid-area: p3;
+}
+
+.post-item:nth-of-type(4) {
+  grid-area: p4;
+}
+
+.post-item:nth-of-type(5) {
+  grid-area: p5;
+}
+
+.post-item:nth-of-type(6) {
+  grid-area: p6;
+}
+
+.posts__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -760,11 +880,13 @@ h2 {
     margin-bottom: 30px;
   }
 }
+
 @media (min-height: 691px) {
   .skill-item {
     min-height: calc(33.3333vh - 13.3333px);
   }
 }
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -789,6 +911,7 @@ h2 {
     font-size: 1.25rem;
   }
 }
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
@@ -802,11 +925,9 @@ h2 {
   }
   .btn--primary {
     height: 60px;
-    width: 100%;
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 350px;
+    border: 2px solid #2d3651;
+    background-color: rgba(45, 54, 81, 0.8);
   }
   .header-content__title {
     margin: 0 0 53px;
@@ -816,6 +937,7 @@ h2 {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
 }
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -832,6 +954,7 @@ h2 {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
+
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
@@ -879,17 +1002,20 @@ h2 {
     font-size: 1.125rem;
   }
 }
+
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills-container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
 }
+
 @media (max-height: 690px) {
   .skill-item {
     min-height: 216.6667px;
   }
 }
+
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;
