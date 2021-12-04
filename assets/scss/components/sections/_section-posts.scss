@@ -3,23 +3,23 @@
 
 .posts {
   @include lg-min {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
   }
 
   @include lg-md {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
   }
 
   @include md-sm {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
   }
 
   @include sm {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
   }
 
   &__container {
@@ -88,7 +88,7 @@
     align-content: center;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: #2d3651;
+    background-color: $color-primary;
 
     img {
       width: 100%;

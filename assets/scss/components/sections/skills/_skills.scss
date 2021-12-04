@@ -33,12 +33,12 @@
   &-actions {
     display: flex;
     justify-content: center;
-    height: 60px;
+    height: $gap-x3;
 
     & a {
       font-size: 18px;
       letter-spacing: 0.1em;
-      color: #ffffff;
+      color: $color-light;
     }
 
     margin-top: $gap;

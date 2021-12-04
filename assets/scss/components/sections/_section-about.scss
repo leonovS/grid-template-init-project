@@ -3,19 +3,19 @@
 
 .about {
   letter-spacing: 0.055em;
-  background-color: #e5e5e5;
+  background-color: $color-gray-light;
 
   @include lg-min {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: $gap-x5;
+    padding-bottom: $gap-x5;
   }
   @include lg-md {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: $gap-x4;
+    padding-bottom: $gap-x4;
   }
   @include md {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: $gap-x3;
+    padding-bottom: $gap-x3;
   }
 
   &__container {
@@ -23,7 +23,7 @@
 
     @include lg-min {
       grid-template-columns: 1fr 271px;
-      gap: 100px;
+      gap: $gap-x5;
     }
     @include lg-md {
       grid-template-columns: 1fr 271px;
@@ -71,7 +71,7 @@
         right: -$gap;
       }
       @include md {
-        right: -10px;
+        right: -$gap-sm;
       }
       top: 0;
       width: 2px;

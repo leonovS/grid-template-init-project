@@ -16,16 +16,16 @@
 
   @include lg-min {
     font-size: 1.125rem;
-    height: 60px;
+    height: $gap-x3;
   }
 
   @include lg-md {
     font-size: 1rem;
-    height: 60px;
+    height: $gap-x3;
   }
   @include md {
     font-size: 1.125rem;
-    height: 60px;
+    height: $gap-x3;
   }
 
   &--light {
@@ -34,7 +34,7 @@
 
     @include lg-min {
       width: 250px;
-      height: 60px;
+      height: $gap-x3;
     }
     @include lg-md {
       width: 200px;
@@ -49,14 +49,14 @@
 
   &--primary {
     @include lg-min {
-      height: 60px;
+      height: $gap-x3;
       width: 350px;
       border: 2px solid $color-primary;
       background-color: rgba(45, 54, 81, 0.8);
     }
 
     @include lg-md {
-      height: 60px;
+      height: $gap-x3;
       font-size: 1.125rem;
     }
 
