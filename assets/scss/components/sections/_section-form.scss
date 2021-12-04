@@ -39,6 +39,10 @@
   }
 
   &-item {
+    &__container {
+      @extend %container;
+    }
+
     &__input {
       display: block;
       width: 100%;
