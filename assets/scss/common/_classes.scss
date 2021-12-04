@@ -16,7 +16,18 @@
 
   @include lg-min {
     font-size: 1.125rem;
+    height: 60px;
   }
+
+  @include lg-md {
+    font-size: 1rem;
+    height: 60px;
+  }
+  @include md {
+    font-size: 1.125rem;
+    height: 60px;
+  }
+
   &--light {
     border: 2px solid $color-light;
     background-color: rgba(255, 255, 255, 0.1);
@@ -44,8 +55,10 @@
       background-color: rgba(45, 54, 81, 0.8);
     }
 
-    border: 2px solid $color-primary;
-    background-color: rgba(45, 54, 81, 0.8);
+    @include lg-md {
+      height: 60px;
+      font-size: 1.125rem;
+    }
 
     @include sm-min {
       width: 350px;
@@ -53,10 +66,14 @@
     @include sm {
       width: 100%;
     }
+
+    border: 2px solid $color-primary;
+    background-color: rgba(45, 54, 81, 0.8);
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: $color-accent;
   }
 }

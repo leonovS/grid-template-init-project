@@ -20,6 +20,12 @@
     }
   }
 
+  &:active {
+    .skill-item__link {
+      color: $color-accent;
+    }
+  }
+
   &__title {
     z-index: 1;
 
