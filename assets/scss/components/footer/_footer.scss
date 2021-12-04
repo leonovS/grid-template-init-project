@@ -2,7 +2,7 @@
 @use "../../mixins" as *;
 
 .footer {
-  padding: 50px 20px 70px;
+  padding: 50px $gap 70px;
   text-align: center;
   background-color: $color-primary;
 
@@ -14,12 +14,12 @@
     position: relative;
     display: grid;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: $gap-x2;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
     &::after {
       position: absolute;
-      bottom: -20px;
+      bottom: -$gap;
       left: calc(50% - 37.5px);
       width: 75px;
       height: 2px;

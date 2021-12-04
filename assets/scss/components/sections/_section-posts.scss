@@ -48,8 +48,8 @@
       grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     }
 
-    padding-bottom: 20px;
-    gap: 20px;
+    padding-bottom: $gap;
+    gap: $gap;
   }
 
   &__actions {
@@ -101,7 +101,7 @@
   &__caption {
     display: grid;
     align-content: center;
-    padding: 20px;
+    padding: $gap;
 
     & p {
       transition: color 0.5s;

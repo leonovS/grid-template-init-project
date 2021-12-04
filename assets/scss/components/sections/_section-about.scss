@@ -27,15 +27,15 @@
     }
     @include lg-md {
       grid-template-columns: 1fr 271px;
-      gap: 40px;
+      gap: $gap-x2;
     }
     @include md {
       grid-template-columns: 1fr 236px;
-      gap: 20px;
+      gap: $gap;
     }
     @include sm {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: $gap;
     }
 
     @extend %container;
@@ -68,7 +68,7 @@
         right: -50px;
       }
       @include lg-md {
-        right: -20px;
+        right: -$gap;
       }
       @include md {
         right: -10px;

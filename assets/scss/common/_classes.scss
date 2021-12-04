@@ -42,7 +42,7 @@
     }
     @include md {
       width: 170px;
-      height: 40px;
+      height: $gap-x2;
       letter-spacing: 0.05em;
     }
   }
