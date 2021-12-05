@@ -5,7 +5,7 @@
   padding: $gap-lg 0;
   background-color: $color-primary;
 
-  & .btn--primary {
+  & .btn--light {
     width: 100%;
 
     border-color: rgba(255, 255, 255, 0);
@@ -52,11 +52,15 @@
 
       transition: background-color 0.5s, border-color 0.5s;
       letter-spacing: 0.15em;
-      color: $color-light;
+      background-color: $color-light;
       border: 2px solid rgba(255, 255, 255, 0);
       border-bottom-color: rgba(255, 255, 255, 0.25);
       background-color: rgba(255, 255, 255, 0.05);
       font-size: 1.125rem;
+
+      &::placeholder {
+        color: $color-gray;
+      }
 
       &:hover,
       &:focus {

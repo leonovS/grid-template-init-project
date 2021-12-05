@@ -9,7 +9,7 @@
     padding: $gap;
   }
 
-  &-container {
+  &__container {
     display: grid;
 
     @include lg-min {
@@ -30,13 +30,13 @@
     }
   }
 
-  &-actions {
+  &__actions {
     display: flex;
     justify-content: center;
     height: $gap-x3;
 
     & a {
-      font-size: 18px;
+      font-size: 1.125rem;
       letter-spacing: 0.1em;
       color: $color-light;
     }
