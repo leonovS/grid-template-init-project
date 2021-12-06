@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.footer__container, .posts__container, .form__container, .form-item__container, .about__container, .header-content__container, .header-menu__container {
+.footer__container, .posts__container, .form__container, .about__container, .header-content__container, .header-menu__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -723,8 +723,15 @@ h3 {
   padding: 30px 0;
   background-color: #2d3651;
 }
+.form__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 .form .btn--light {
   width: 100%;
+  height: 60px;
+  font-size: 1.125rem;
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
@@ -737,11 +744,6 @@ h3 {
   background-color: #d66926;
   cursor: pointer;
 }
-.form__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
 .form-item__input {
   display: block;
   width: 100%;
@@ -752,7 +754,7 @@ h3 {
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.15em;
-  background-color: #ffffff;
+  color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
@@ -777,7 +779,6 @@ h3 {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
   outline: none;
 }
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
